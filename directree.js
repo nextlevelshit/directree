@@ -1,8 +1,7 @@
 const util = require('./src/utilities')
-const examples = require('./test/paths')
 
-function queryRecursivly (collection, query = '') {
-  const queryGen = queryGenerator(
+function direcTree (collection, query = '') {
+  const queryGen = query(
     collection,
     query.split('/').filter(item => item)
   )
@@ -13,7 +12,7 @@ function queryRecursivly (collection, query = '') {
   return next.value
 }
 
-function * queryGenerator (collection, queryChunks) {
+function * query (collection, queryChunks) {
   while (queryChunks.length > 0) {
     collection = util.findValueOf(collection, queryChunks.shift())
     yield
@@ -22,4 +21,4 @@ function * queryGenerator (collection, queryChunks) {
   return collection
 }
 
-console.log(queryRecursivly(examples, 'work/'))
+exports.modules = direcTree

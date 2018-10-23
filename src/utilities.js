@@ -3,7 +3,7 @@
 function findValueOf (arr, key) {
   try {
     return Object.values(arr.find(item => {
-      return isObjectOfKey(item, key)
+      return isObjectKey(item, key)
     }))[0]
   } catch (err) {
     return null
@@ -11,10 +11,10 @@ function findValueOf (arr, key) {
 }
 
 function isObject (param) {
-  return typeof param === 'object'
+  return param instanceof Object && !(param instanceof Array)
 }
 
-function isObjectOfKey (obj, key) {
+function isObjectKey (obj, key) {
   return isObject(obj)
     ? Object.keys(obj)[0] === key
     : false
@@ -23,5 +23,5 @@ function isObjectOfKey (obj, key) {
 module.exports = {
   findValueOf,
   isObject,
-  isObjectOfKey
+  isObjectKey
 }

@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Directree</h1>  
+  <h1>DirecTree</h1>  
   <sup>Read, Query and Save Directory Trees recursivly</sup>
 </div>
 
