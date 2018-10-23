@@ -1,0 +1,38 @@
+{
+  "name": "directree",
+  "version": "0.0.0",
+  "description": "Read, query and save directory trees recursivly",
+  "main": "directree.js",
+  "scripts": {
+    "lint": "standard",
+    "unit": "mocha",
+    "test": "npm run lint && npm run unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nextlevelshit/directree.git"
+  },
+  "keywords": [
+    "fs",
+    "directory",
+    "folders",
+    "walk",
+    "sync"
+  ],
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "author": "Michal Czechowski",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/nextlevelshit/directree/issues"
+  },
+  "homepage": "https://github.com/nextlevelshit/directree#readme",
+  "devDependencies": {
+    "memory-fs": "^0.4.1",
+    "mocha": "^5.2.0",
+    "standard": "^12.0.1"
+  }
+}
