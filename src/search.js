@@ -1,6 +1,8 @@
-const util = require('./src/utilities')
+'use strict'
 
-function direcTree (collection, query = '') {
+const util = require('./utilities')
+
+function search (collection, query = '') {
   const queryGen = query(
     collection,
     query.split('/').filter(item => item)
@@ -17,8 +19,9 @@ function * query (collection, queryChunks) {
     collection = util.findValueOf(collection, queryChunks.shift())
     yield
   }
-
   return collection
 }
 
-exports.modules = direcTree
+module.exports = search
+module.exports.default = module.exports
+

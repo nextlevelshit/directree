@@ -27,3 +27,4 @@ const paths = [
 ]
 
 module.exports = paths
+module.exports.default = module.exports

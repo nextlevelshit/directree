@@ -1,7 +1,7 @@
 {
   "name": "directree",
   "version": "0.0.0",
-  "description": "Read, query and save directory trees recursivly",
+  "description": "Read, write and search directory trees recursivly",
   "main": "directree.js",
   "scripts": {
     "lint": "standard",

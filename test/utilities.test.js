@@ -1,7 +1,7 @@
 'use strict'
 
 const assert = require('assert')
-const util = require('../src/utilities')
+const util = require('./../src/utilities')
 
 describe('Utilities', () => {
   const objectSuccess = [
@@ -29,19 +29,19 @@ describe('Utilities', () => {
     null
   ]
 
-  it('should fail on recognizing non-objects', () => {
+  it('Should fail on recognizing non-objects.', () => {
     objectFail.forEach(obj => {
       assert.strictEqual(util.isObject(obj), false)
     })
   })
 
-  it('should success on recognizing an object', () => {   
+  it('Should success on recognizing an object.', () => {   
     objectSuccess.forEach(obj => {
       assert.strictEqual(util.isObject(obj), true)
     })
   })
 
-  it('should fail on finding key in objects', () => {
+  it('Should fail on finding key in objects.', () => {
     objectFail.forEach(obj => {
       assert.strictEqual(util.isObjectKey(obj, 'foo'), false)
     })
@@ -50,17 +50,17 @@ describe('Utilities', () => {
     })
   })
 
-  it('should success on finding key in objects', () => {
+  it('Should success on finding key in objects.', () => {
     objectSuccess.forEach(obj => {
       assert.strictEqual(util.isObjectKey(obj, 'foo'), true)
     })
   })
 
-  it('should return null while not finding key in array', () => {
+  it('Should return null while not finding key in array.', () => {
     assert.strictEqual(util.findValueOf(objectSuccess, 'bar'), null)
   })
 
-  it('should success on finding first key in array', () => {
+  it('Should success on finding first key in array.', () => {
     assert.strictEqual(util.findValueOf(objectSuccess, 'foo'), objectSuccess[0].foo)
   })
 

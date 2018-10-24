@@ -25,3 +25,4 @@ module.exports = {
   isObject,
   isObjectKey
 }
+module.exports.default = module.exports
