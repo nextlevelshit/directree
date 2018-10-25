@@ -2,9 +2,9 @@
 
 const util = require('./utilities')
 
-function search (collection, query = '') {
-  const queryGen = query(
-    collection,
+function search (paths, query = '') {
+  const queryGen = searchGenerator(
+    paths,
     query.split('/').filter(item => item)
   )
   let next = queryGen.next()
@@ -14,12 +14,12 @@ function search (collection, query = '') {
   return next.value
 }
 
-function * query (collection, queryChunks) {
+function * searchGenerator (paths, queryChunks) {
   while (queryChunks.length > 0) {
-    collection = util.findValueOf(collection, queryChunks.shift())
+    paths = util.findValueOf(paths, queryChunks.shift())
     yield
   }
-  return collection
+  return paths
 }
 
 module.exports = search
