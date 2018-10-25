@@ -28,8 +28,10 @@ yarn nls-directree
 ### Usage
 
 Import/Require module
-```js
-const dtree = require('nls-directree')
+```ts
+const dtree = require('nls-directree') // JavaScript
+// OR
+import * as dtree from 'nls-directree' // TypeScript
 ```
 
 Example folder structure
