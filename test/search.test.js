@@ -8,7 +8,7 @@ describe('Search', () => {
   const resultMap = [
     { 'work': paths[6].work },
     { 'work/sculpture': paths[6].work[3].sculpture },
-    { 'work/drawing': paths[6].work[2].drawing }
+    { 'work/drawing': paths[6].work[0].drawing }
   ]
 
   it('Should return empty list for empty directory.', () => {

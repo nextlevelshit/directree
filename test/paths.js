@@ -7,16 +7,16 @@ const paths = [
   'vita.md',
   {
     'work': [
-      'example.jpg',
-      'index.md',
       {
         'drawing': [{
           'Z-WV-2018-001': [
-            'index.md',
-            'Z-WV-2018-001-0.jpeg'
+            'Z-WV-2018-001-0.jpeg',
+            'index.md'
           ]
         }]
       },
+      'example.jpg',
+      'index.md',
       {
         'sculpture': []
       }
