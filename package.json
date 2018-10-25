@@ -1,6 +1,6 @@
 {
   "name": "nls-directree",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Read, write and search directory trees recursivly",
   "main": "directree.js",
   "scripts": {
