@@ -5,10 +5,6 @@
 
 <br>
 
-*WIP (Work in Progress): This project is under heavy construction. Please, use with caution.*
-
-<br>
-
 ## Getting Started
 
 ### Rquirements
@@ -113,7 +109,7 @@ Example code
 ```js
 dtree.write('path/to/your/directory', 'paths.json')
 ```
- Will write a file to `./paths.json` (*the identical folder, where your excuting that code*) in JSON format:
+ Will write a file to `./paths.json` (*the identical folder, where you're excuting that code*) in JSON format:
 
  ```json
 {
