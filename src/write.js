@@ -9,7 +9,9 @@ function write (dir, dest) {
     paths = read(dir)
   }
 
-  fs.writeFile(dest, `{\n\tpaths: ${JSON.stringify(paths)}\n}`, (err) => {
+  const output = JSON.stringify({ paths: paths }, null, 2)
+
+  fs.writeFile(dest, output, (err) => {
     if (err) throw err
   })
 }
