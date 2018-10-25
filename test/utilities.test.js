@@ -31,37 +31,36 @@ describe('Utilities', () => {
 
   it('Should fail on recognizing non-objects.', () => {
     objectFail.forEach(obj => {
-      assert.strictEqual(util.isObject(obj), false)
+      assert.deepStrictEqual(util.isObject(obj), false)
     })
   })
 
-  it('Should success on recognizing an object.', () => {   
+  it('Should success on recognizing an object.', () => {
     objectSuccess.forEach(obj => {
-      assert.strictEqual(util.isObject(obj), true)
+      assert.deepStrictEqual(util.isObject(obj), true)
     })
   })
 
   it('Should fail on finding key in objects.', () => {
     objectFail.forEach(obj => {
-      assert.strictEqual(util.isObjectKey(obj, 'foo'), false)
+      assert.deepStrictEqual(util.isObjectKey(obj, 'foo'), false)
     })
     objectSuccess.forEach(obj => {
-      assert.strictEqual(util.isObjectKey(obj, 'baz'), false)
+      assert.deepStrictEqual(util.isObjectKey(obj, 'baz'), false)
     })
   })
 
   it('Should success on finding key in objects.', () => {
     objectSuccess.forEach(obj => {
-      assert.strictEqual(util.isObjectKey(obj, 'foo'), true)
+      assert.deepStrictEqual(util.isObjectKey(obj, 'foo'), true)
     })
   })
 
   it('Should return null while not finding key in array.', () => {
-    assert.strictEqual(util.findValueOf(objectSuccess, 'bar'), null)
+    assert.deepStrictEqual(util.findValueOf(objectSuccess, 'bar'), null)
   })
 
   it('Should success on finding first key in array.', () => {
-    assert.strictEqual(util.findValueOf(objectSuccess, 'foo'), objectSuccess[0].foo)
+    assert.deepStrictEqual(util.findValueOf(objectSuccess, 'foo'), objectSuccess[0].foo)
   })
-
 })

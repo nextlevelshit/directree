@@ -1,6 +1,5 @@
 'use strict'
 
-const util = require('./src/utilities')
 const read = require('.src/read')
 const write = require('.src/write')
 const search = require('.src/search')

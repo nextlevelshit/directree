@@ -24,4 +24,3 @@ function * searchGenerator (paths, queryChunks) {
 
 module.exports = search
 module.exports.default = module.exports
-

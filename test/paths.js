@@ -10,14 +10,12 @@ const paths = [
       'example.jpg',
       'index.md',
       {
-        'drawing': [
-          {
-            'Z-WV-2018-001': [
-              'index.md',
-              'Z-WV-2018-001-0.jpeg'
-            ]
-          }
-        ]
+        'drawing': [{
+          'Z-WV-2018-001': [
+            'index.md',
+            'Z-WV-2018-001-0.jpeg'
+          ]
+        }]
       },
       {
         'sculpture': []

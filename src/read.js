@@ -1,22 +1,10 @@
 'use strict'
 
-const util = require('./utilities')
+// const util = require('./utilities')
 
 function read () {
-  try {
-    throw {
-      name: 'Function not in Use',
-      message: 'This funtion is not available at this stage of developement',
-      toString: function() {
-        return this.name + ': ' + this.message
-      }
-    };
-  }
-  catch (e) {
-    alert(e)
-  }
+  throw new Error('This funtion is not available at this stage of developement')
 }
 
 module.exports = read
 module.exports.default = module.exports
-
