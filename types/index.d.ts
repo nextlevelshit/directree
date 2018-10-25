@@ -5,7 +5,7 @@ export interface DirecTree {
 }
 
 export function ReadFunction(dir: string): array
-export function SearchFunction(paths: array, query: null|string): null|array
+export function SearchFunction(paths: array, query: null|string): array
 export function WriteFunction(): any
 
 declare const directree: DirecTree;

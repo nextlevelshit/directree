@@ -15,6 +15,33 @@
 
 - [Install **Node.js** via package manager](//nodejs.org/en/download/package-manager/)
 
+### Install
+
+Use `npm` or `yarn` to install that package.
+
+```bash
+npm i nls-directree
+# OR
+yarn nls-directree
+```
+
+### Usage
+
+Import/Require module
+```js
+const dtree = require('nls-directree')
+```
+
+#### dtree.read(*dir: string*): array
+
+#### dtree.search(*paths: array, query: null|string*): array
+
+#### dtree.write(*dir: string, dest: string*): void
+
+## Development
+
+Any contribution to that code base is warmly welcomed. Feel free to send merge requests, commits, improvements, issues and any kind of participation.
+
 ### Usefull Scripts
 
 | command          | description                                                     |
@@ -25,7 +52,7 @@
 
 *Informations about the motivation, authors and license*
 
-## Contributor
+## Author
 - Michael Czechowski (<mail@dailysh.it>)
 
 ## License
