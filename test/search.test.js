@@ -8,16 +8,15 @@ describe('Search', () => {
   const resultMap = [
     { 'work': paths[6].work },
     { 'work/sculpture': paths[6].work[3].sculpture },
-    { 'work/drawing': paths[6].work[2].drawing },
-    { 'dont-work-for-less': null }
+    { 'work/drawing': paths[6].work[2].drawing }
   ]
 
   it('Should return empty list for empty directory.', () => {
     assert.deepStrictEqual(search(paths, 'work/sculpture'), [])
   })
 
-  it('Should return null for because of not finding any results.', () => {
-    assert.deepStrictEqual(search(paths, 'dont-listen-to-me'), null)
+  it('Should return error because of not finding any results.', () => {
+    assert.throws(() => search(paths, 'dont-listen-to-me'), Error)
   })
 
   it('Should return search results.', () => {

@@ -56,8 +56,8 @@ describe('Utilities', () => {
     })
   })
 
-  it('Should return null while not finding key in array.', () => {
-    assert.deepStrictEqual(util.findValueOf(objectSuccess, 'bar'), null)
+  it('Should throw error while not finding key in array.', () => {
+    assert.throws(() => util.findValueOf(objectSuccess, 'bar'), Error)
   })
 
   it('Should success on finding first key in array.', () => {

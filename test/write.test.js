@@ -4,7 +4,7 @@ const write = require('./../src/write')
 // const util = require('./../src/utilities')
 
 describe('Write', () => {
-  it('Should throw exception.', () => {
-    assert.throws(write)
+  it('Should throw error.', () => {
+    assert.throws(write, Error)
   })
 })

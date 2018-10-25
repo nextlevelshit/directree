@@ -6,7 +6,7 @@ function findValueOf (arr, key) {
       return isObjectKey(item, key)
     }))[0]
   } catch (err) {
-    return null
+    throw new Error('No such key in array')
   }
 }
 
