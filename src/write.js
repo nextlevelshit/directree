@@ -1,9 +1,17 @@
 'use strict'
+const fs = require('fs')
+const read = require('./read')
 
-// const util = require('./utilities')
+function write (dir, dest) {
+  let paths = dir
 
-function write () {
-  throw new Error('This funtion is not available at this stage of developement')
+  if (!(dir instanceof Array)) {
+    paths = read(dir)
+  }
+
+  fs.writeFile(dest, `{\n\tpaths: ${paths}\n}`, (err) => {
+    if (err) throw err
+  })
 }
 
 module.exports = write

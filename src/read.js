@@ -1,8 +1,6 @@
 'use strict'
-
 const fs = require('fs')
 const path = require('path')
-// const util = require('./utilities')
 
 function read (dir) {
   dir = path.resolve(dir)

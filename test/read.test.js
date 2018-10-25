@@ -30,7 +30,8 @@ describe('Read', () => {
   it('Should return all items of a dir containing path.', () => {
     const items = read(TEST_DIR)
 
-    assert(items.length, paths.length)
+    assert.strictEqual(items.length, paths.length)
+
     items.forEach((p, i) => {
       assert.deepStrictEqual(p, paths[i])
     })

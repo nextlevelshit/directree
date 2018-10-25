@@ -104,7 +104,7 @@ Expected output
 ]
 ```
 
-#### dtree.write(*dir: string, dest: string*): void
+#### dtree.write(*dir: array|string, dest: string*): boolean
 
 *Coming soon*
 

@@ -1,5 +1,4 @@
 'use strict'
-
 const util = require('./utilities')
 
 function search (paths, query = '') {
