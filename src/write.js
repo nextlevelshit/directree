@@ -9,7 +9,7 @@ function write (dir, dest) {
     paths = read(dir)
   }
 
-  fs.writeFile(dest, `{\n\tpaths: ${paths.toString()}\n}`, (err) => {
+  fs.writeFile(dest, `{\n\tpaths: ${JSON.stringify(paths)}\n}`, (err) => {
     if (err) throw err
   })
 }
