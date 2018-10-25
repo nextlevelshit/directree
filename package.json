@@ -1,5 +1,5 @@
 {
-  "name": "direc-tree",
+  "name": "nls-directree",
   "version": "1.0.0",
   "description": "Read, write and search directory trees recursivly",
   "main": "directree.js",
