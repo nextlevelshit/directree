@@ -7,7 +7,6 @@ const paths = require('./paths')
 const dirs = require('./dirs')
 const files = require('./files')
 const read = require('./../src/read')
-// const util = require('./../src/utilities')
 
 describe('Read', () => {
   const TEST_DIR = path.join(os.tmpdir(), 'nls-directree')
@@ -24,11 +23,11 @@ describe('Read', () => {
 
   afterEach(() => fs.removeSync(TEST_DIR))
 
-  it('should return an error if the source dir does not exist', () => {
+  it('Should return an error if the source dir does not exist.', () => {
     assert.throws(() => read('dir-of-hope-and-non-existence/'), Error)
   })
 
-  it('should return all items of a dir containing path', () => {
+  it('Should return all items of a dir containing path.', () => {
     const items = read(TEST_DIR)
 
     assert(items.length, paths.length)

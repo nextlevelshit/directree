@@ -6,4 +6,3 @@ const dirs = [
 ]
 
 module.exports = dirs
-module.exports.default = module.exports

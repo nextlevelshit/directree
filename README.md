@@ -32,11 +32,79 @@ Import/Require module
 const dtree = require('nls-directree')
 ```
 
+Example folder structure
+```
+./
+├── contact.md
+├── disclaimer.md
+├── imprint.md
+├── index.md
+├── news.md
+├── vita.md
+└── work
+    ├── drawing
+    │   └── Z-WV-2018-001
+    │       ├── index.md
+    │       └── Z-WV-2018-001-0.jpeg
+    │   ├── example.jpg
+    │   └── index.md
+    └── sculpture
+```
+
 #### dtree.read(*dir: string*): array
+
+`read()` inspects the given `dir` directory and outputs the tree.
+
+Example code
+```js
+console.dir(dtree.read('./work'), { depth: null })
+```
+
+Expected output
+```js
+[ 
+  { 
+    drawing: [ 
+      { 
+        'Z-WV-2018-001': [ 
+          'Z-WV-2018-001-0.jpeg', 
+          'index.md'
+        ] 
+      } 
+    ] 
+  },
+  'example.jpg',
+  'index.md',
+  { 
+    sculpture: [] 
+  } 
+]
+```
 
 #### dtree.search(*paths: array, query: null|string*): array
 
+`search()` expects an array of paths (*formely the output of `read()`*) and a query string separated by `/` (*human-readable path*).
+
+Example code
+```js
+console.dir(dtree.search(dtree.read('./'), 'work/drawing'), { depth: null })
+```
+
+Expected output
+```js
+[ 
+  { 
+    'Z-WV-2018-001': [ 
+      'Z-WV-2018-001-0.jpeg', 
+      'index.md'
+    ]
+  } 
+]
+```
+
 #### dtree.write(*dir: string, dest: string*): void
+
+*Coming soon*
 
 ## Development
 

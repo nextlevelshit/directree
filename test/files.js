@@ -12,4 +12,3 @@ const files = [
 ]
 
 module.exports = files
-module.exports.default = module.exports
