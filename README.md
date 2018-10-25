@@ -36,7 +36,7 @@ import * as dtree from 'nls-directree' // TypeScript
 
 Example folder structure
 ```
-./
+path/to/your/directory
 ├── contact.md
 ├── disclaimer.md
 ├── imprint.md
@@ -59,7 +59,7 @@ Example folder structure
 
 Example code
 ```js
-console.dir(dtree.read('./work'), { depth: null })
+console.dir(dtree.read('path/toy/your/directory/work'), { depth: null })
 ```
 
 Expected output
@@ -89,7 +89,7 @@ Expected output
 
 Example code
 ```js
-console.dir(dtree.search(dtree.read('./'), 'work/drawing'), { depth: null })
+console.dir(dtree.search(dtree.read('path/to/your/directory'), 'work/drawing'), { depth: null })
 ```
 
 Expected output
@@ -106,7 +106,47 @@ Expected output
 
 #### dtree.write(*dir: array|string, dest: string*): boolean
 
-*Coming soon*
+
+`write()` expects a compiled direcrory tree with `read()` or a path to the wished directory and the path to the destination file, where to write the content as JSON.
+
+Example code
+```js
+dtree.write('path/to/your/directory', 'paths.json')
+```
+ Will write a file to `./paths.json` (*the identical folder, where your excuting that code*) in JSON format:
+
+ ```json
+{
+  "paths": [
+    "contact.md",
+    "disclaimer.md",
+    "imprint.md",
+    "index.md",
+    "news.md",
+    "paths.json",
+    "vita.md",
+    {
+      "work": [
+        {
+          "drawing": [
+            {
+              "Z-WV-2018-001": [
+                "Z-WV-2018-001-0.jpeg",
+                "index.md"
+              ]
+            }
+          ]
+        },
+        "example.md",
+        "index.md"
+        {
+          "sculpture": [ ]
+        }
+      ]
+    }
+  ]
+}
+```
 
 ## Development
 
