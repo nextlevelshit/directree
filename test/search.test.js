@@ -12,7 +12,7 @@ describe('Search', () => {
   ]
 
   it('Should return empty list for empty directory.', () => {
-    assert.deepStrictEqual(search(paths, 'work/sculpture'), [])
+    assert.deepStrictEqual(search.search(paths, 'work/sculpture'), [])
   })
 
   it('Should return error because of not finding any results.', () => {
@@ -22,7 +22,7 @@ describe('Search', () => {
   it('Should return search results.', () => {
     resultMap.forEach(result => {
       const entry = Object.entries(result)[0]
-      assert.deepStrictEqual(search(paths, entry[0]), entry[1])
+      assert.deepStrictEqual(search.search(paths, entry[0]), entry[1])
     })
   })
 })

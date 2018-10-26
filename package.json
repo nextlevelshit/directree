@@ -1,11 +1,12 @@
 {
-  "name": "nls-directree",
+  "name": "@nextlevelshit/directree-searchonly",
   "version": "2.0.0",
-  "description": "Read, write and search directory trees recursivly",
-  "main": "directree.js",
+  "description": "Search compiled directory trees recursivly",
+  "main": "index.js",
   "scripts": {
     "lint": "standard",
     "unit": "mocha",
+    "build": "tsc index.ts",
     "test": "npm run lint && npm run unit"
   },
   "repository": {
