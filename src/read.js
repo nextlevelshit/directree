@@ -1,26 +1,19 @@
-'use strict'
-const fs = require('fs')
-const path = require('path')
-
-function read (dir) {
-  dir = path.resolve(dir)
-
-  const results = []
-  const pathsFull = fs.readdirSync(dir).map(p => dir + path.sep + p)
-  const pathsRelative = fs.readdirSync(dir).map(p => p)
-
-  pathsRelative.forEach((relative, i) => {
-    const full = pathsFull[i]
-    const isDir = fs.statSync(full).isDirectory()
-
-    results.push(isDir
-      ? { [relative]: read(full) }
-      : relative
-    )
-  })
-
-  return results
+"use strict";
+exports.__esModule = true;
+var fs_1 = require("fs");
+var path_1 = require("path");
+function read(dir) {
+    dir = path_1.resolve(dir);
+    var results = [];
+    var pathsFull = fs_1.readdirSync(dir).map(function (p) { return dir + path_1.sep + p; });
+    var pathsRelative = fs_1.readdirSync(dir).map(function (p) { return p; });
+    pathsRelative.forEach(function (relative, i) {
+        var full = pathsFull[i];
+        var isDir = fs_1.statSync(full).isDirectory();
+        results.push(isDir
+            ? (_a = {}, _a[relative] = read(full), _a) : relative);
+        var _a;
+    });
+    return results;
 }
-
-module.exports = read
-module.exports.default = module.exports
+exports.read = read;

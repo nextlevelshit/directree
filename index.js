@@ -1,12 +1,6 @@
-'use strict'
-
-const read = require('./src/read')
-const write = require('./src/write')
-const search = require('./src/search')
-
-module.exports = {
-  read,
-  write,
-  search
-}
-module.exports.default = module.exports
+"use strict";
+exports.__esModule = true;
+var read_1 = require("./src/read");
+var write_1 = require("./src/write");
+var search_1 = require("./src/search");
+exports["default"] = { read: read_1.read, write: write_1.write, search: search_1.search };

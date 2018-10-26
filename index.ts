@@ -1,5 +1,5 @@
-import { read } from './es6/read';
-import { write } from './es6/write';
-import { search } from './es6/search';
+import { read } from './src/read';
+import { write } from './src/write';
+import { search } from './src/search';
 
-export default { read, write, search }
+export default { read, write, search };

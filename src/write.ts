@@ -1,7 +1,5 @@
-import * as fs from 'fs';
-import * as path from 'path';
-
-import { read } from 'read';
+import { writeFile } from 'fs';
+import { read } from './read';
 
 export function write (dir, dest) {
   let paths = dir
@@ -12,7 +10,7 @@ export function write (dir, dest) {
 
   const output = JSON.stringify({ paths: paths }, null, 2)
 
-  fs.writeFile(dest, output, (err) => {
+  writeFile(dest, output, (err) => {
     if (err) throw err
   })
 }

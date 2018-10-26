@@ -1,7 +1,4 @@
-import * as fs from 'fs';
-import * as path from 'path';
-
-import { util } from 'utilities';
+import { findValueOf } from './utilities';
 
 export function search (paths, query = '') {
   const queryGen = searchGenerator(
@@ -17,7 +14,7 @@ export function search (paths, query = '') {
 
 function * searchGenerator (paths, queryChunks) {
   while (queryChunks.length > 0) {
-    paths = util.findValueOf(paths, queryChunks.shift())
+    paths = findValueOf(paths, queryChunks.shift())
     yield
   }
   return paths
