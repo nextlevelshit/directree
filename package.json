@@ -1,5 +1,5 @@
 {
-  "name": "@nextlevelshit/directree-searchonly",
+  "name": "nls-directree-searchonly",
   "version": "2.0.0",
   "description": "Search compiled directory trees recursivly",
   "main": "index.js",
