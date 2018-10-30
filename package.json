@@ -2,13 +2,13 @@
   "name": "nls-directree-searchonly",
   "version": "2.0.3",
   "description": "Search compiled directory trees recursivly",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "postinstall": "typings install",
     "transpile": "tsc",
-    "lint": "npm run transpile && standard --fix",
-    "unit": "npm run lint && mocha",
-    "test": "npm run unit && npm run unit"
+    "lint": "standard --fix",
+    "unit": "mocha",
+    "test": "npm run transpile && npm run lint && npm run unit"
   },
   "repository": {
     "type": "git",
