@@ -1,7 +1,7 @@
 'use strict'
 
 const assert = require('assert')
-const util = require('./../src/utilities')
+const util = require('./../dist/src/utilities')
 
 describe('Utilities', () => {
   const objectSuccess = [

@@ -2,7 +2,7 @@
 
 const assert = require('assert')
 const paths = require('./paths')
-const search = require('./../src/search')
+const search = require('./../dist/index')
 
 describe('Search', () => {
   const resultMap = [

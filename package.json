@@ -4,10 +4,11 @@
   "description": "Search compiled directory trees recursivly",
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
-    "unit": "mocha",
-    "build": "tsc index.ts",
-    "test": "npm run lint && npm run unit"
+    "postinstall": "typings install",
+    "transpile": "tsc",
+    "lint": "npm run transpile && standard --fix",
+    "unit": "npm run lint && mocha",
+    "test": "npm run unit && npm run unit"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,9 @@
     "url": "https://github.com/nextlevelshit/directree/issues"
   },
   "homepage": "https://github.com/nextlevelshit/directree#readme",
+  "dependencies": {
+    "typings": "^1.3.2"
+  },
   "devDependencies": {
     "fs-extra": "^7.0.0",
     "memory-fs": "^0.4.1",
