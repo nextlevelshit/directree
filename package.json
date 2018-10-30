@@ -1,6 +1,6 @@
 {
   "name": "nls-directree-searchonly",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Search compiled directory trees recursivly",
   "main": "index.js",
   "scripts": {
